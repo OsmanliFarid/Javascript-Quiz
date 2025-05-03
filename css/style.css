@@ -18,6 +18,7 @@ body{
     background-color: aquamarine;
     border-radius: 30px;
     box-shadow: 10px 10px 18px rgba(0,0,0,30);
+    margin-top: -390px;
 }
 .quiz-box{
     width:  600px;
@@ -79,4 +80,37 @@ table{
     color: #fff;
     font-size: 20px;
     width: 170px;
-  }
+}
+input{
+    display: block;
+    width: 250px;
+    height: 40px;
+    background-color: #6d6d6d;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    padding: 20px;
+}
+
+.user{
+    background-color: aqua;
+    width: 400px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,30);
+    margin-top: 200px;
+}
+.users{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.SubmitINP{
+   padding: 0;
+}
