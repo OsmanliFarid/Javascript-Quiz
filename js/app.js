@@ -1,20 +1,46 @@
 const QuizBox = document.querySelector("#QuizBox")
+const QuizBoxs = document.querySelector("#QuizBoxs")
+const min = document.querySelector("#min")
+const min2 = document.querySelector("#min2")
+min.classList.add("activeNo")
+min2.classList.add("activeNo")
+let data2 = ""
+let data3 = ""
+let me = 0
+let puan = 0
+let datapuan = 0
 const ENDPOINT = "http://localhost:3000/quiz"
-const cavab = ""
+let duz_cavab = 0
+let sehv_cavab = 0
 const QuizShow = (url) =>{
      axios.get(url).then(({data}) =>{
-        data.options.forEach(element => {
-        });
+        QuizBox.innerHTML = ""
+        datapuan = data.length
+        
+        data2 = data
+         data3 = data2[me]
+        console.log(me);
         
         
         
-        QuizBox.innerHTML += `<h1 class="question">${data.question}</h1>
+            try{
+                QuizBox.innerHTML = `<h1 class="question">${data3.question}</h1>
                 <div class="options-box">
-                    <p class="options" onclick="Option('${data.options[0]}','${data.correctAnswer}')">${data.options[0]}</p>
-                    <p class="options" onclick="Option('${data.options[1]}','${data.correctAnswer}')">${data.options[1]}</p>
-                    <p class="options" onclick="Option('${data.options[2]}','${data.correctAnswer}')">${data.options[2]}</p>
-                    <p class="options" onclick="Option('${data.options[3]}','${data.correctAnswer}')">${data.options[3]}</p>
+                    <button class="options" onclick="Option('${data3.options[0]}','${data3.correctAnswer}')">${data3.options[0]}</button>
+                    <button class="options" onclick="Option('${data3.options[1]}','${data3.correctAnswer}')">${data3.options[1]}</button>
+                    <button class="options" onclick="Option('${data3.options[2]}','${data3.correctAnswer}')">${data3.options[2]}</button>
+                    <button class="options" onclick="Option('${data3.options[3]}','${data3.correctAnswer}')">${data3.options[3]}</button>
                 </div>`
+            }catch{
+                console.log("Salam");
+                
+            }
+            
+        
+        
+        
+        
+        
 
         
         
@@ -25,23 +51,52 @@ const QuizShow = (url) =>{
 }
 
 
+
 QuizShow(ENDPOINT)
 const Option = (id,up) =>{
+    me++
+    console.log(me);
+    if(me == datapuan){
+        QuizBox.innerHTML = ""
+        QuizBoxs.classList.add("m")
+        min.classList.remove("activeNo")
+min2.classList.remove("activeNo")
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
     const options = document.querySelectorAll(".options")
-        options.forEach((element) => {
-            element.style.backgroundColor = "";
-        });
-       options.forEach((element) =>{
+    options.forEach((element) => {
+        element.style.backgroundColor = "";
+    });
+    options.forEach((element) =>{
         
         if(element.textContent === id){  
-            id === up ? element.style.backgroundColor = "green" : element.style.backgroundColor = "red"
-            console.log(id);
+            if(id === up){
+                duz_cavab++
+                min.innerText = duz_cavab
+                
+                
+
+            }else{
+              sehv_cavab++
+              min2.innerText = sehv_cavab
+                
+            }
             
         }
         
-       })
-        
+    })
+    
+    
+    
+    QuizShow(ENDPOINT)
     }
     
 
