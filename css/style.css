@@ -15,7 +15,6 @@ body{
 }
 .quiz-boxs{
     width: 700px;
-    height: 500px;
     background-color: aquamarine;
     border-radius: 30px;
     box-shadow: 10px 10px 18px rgba(0,0,0,30);
@@ -31,10 +30,13 @@ body{
     padding: 20px 40px;
     background-color: black;
     color: white;
-    margin: auto;
-    margin-top: 20px;
+
     border-radius: 30px;
     font-weight: 700;
+    margin-inline: auto;
+    text-align: center;
+    margin-left: 50px;
+    margin-bottom: 30px;
 }
 .question{
     text-align: center;
@@ -42,4 +44,10 @@ body{
 }
 .green{
     background-color: aqua;
+}
+.activeNo{
+    display: none;
+}
+.m {
+    height: 400px;
 }
