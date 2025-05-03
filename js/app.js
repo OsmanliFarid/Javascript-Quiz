@@ -29,19 +29,15 @@ QuizShow(ENDPOINT)
 const Option = (id,up) =>{
     
     const options = document.querySelectorAll(".options")
-    console.log(options);
-    
         options.forEach((element) => {
             element.style.backgroundColor = "";
         });
        options.forEach((element) =>{
         
         if(element.textContent === id){  
-            if(id === up){
-                element.style.backgroundColor = "green"
-            }else{
-                element.style.backgroundColor = "red"
-            }
+            id === up ? element.style.backgroundColor = "green" : element.style.backgroundColor = "red"
+            console.log(id);
+            
         }
         
        })
