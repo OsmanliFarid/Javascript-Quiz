@@ -89,9 +89,40 @@ const QuizShow = (url) =>{
 QuizShow(ENDPOINT)
 
 SualNext.innerText = 0
+const AnswerBoxs = document.querySelector("#AnswerBoxs")
+
 const Option = (id,up) =>{
        
        
+       
+    data3 = data2[me]
+    AnswerBoxs.innerHTML += `<h1 class="AnswerTitle">${data3.question}</h1>
+        <div class="questionBox">
+            <div class="questionA">
+                <p>A)</p>
+            <p>${data3.options[0]}</p>
+            </div>
+            <div class="questionB">
+                <p>B)</p>
+            <p>${data3.options[1]}</p>
+            </div>
+            <div class="questionC">
+                <p>C)</p>
+            <p>${data3.options[2]}</p>
+            </div>
+            <div class="questionD">
+                <p>D)</p>
+            <p>${data3.options[3]}</p>
+            </div>
+        </div>
+        <div class="sual_cavab">
+            <h1 id="Question">sualin cavabi:</h1>
+            <p>${data3.correctAnswer}</p>
+        </div>
+        <div class="user_cavab">
+            <h1 id="UserQuestion">senin cavab:</h1>
+            <p>${id}</p>
+        </div>`
        
        
        
@@ -139,11 +170,24 @@ const Option = (id,up) =>{
  
     setTimeout(() => {
     if(me == datapuan){
-        
+        Swal.fire({
+            title: "Imtahan Bitti!",
+            text: "cavablari gormek ucun ok basin",
+            icon: "success"
+          });
+        const SualBtn = document.querySelector("#SualBtn")
+        SualBtn.style.display = "block" 
+        SualBtn.addEventListener('click',(e) =>{
+            AnswerBoxs.style.display = "block"
+           
+            
+        })
+        const PointsTitle = document.querySelector("#PointsTitle")
     const SualBox = document.querySelector("#SualBox")
     SualBox.style.display = "none"
         QuizBox.innerHTML = ""
         QuizBoxs.classList.add("m")
+        QuizBoxs.classList.add("n")
         Table.classList.remove("activeNo")
         SualBox.classList.remove()
         let arr = {
@@ -160,11 +204,21 @@ const Option = (id,up) =>{
             }
             
         })
-        Swal.fire({
-            title: "Imtahan Bitti!",
-            text: "cavablari gormek ucun ok basin",
-            icon: "success"
-          });
+        if (sehv_cavab > 19) {
+            PointsTitle.innerText = "Daha çox məşq etməlisən 😕";
+        } else if (sehv_cavab > 15) {
+            PointsTitle.innerText = "Çalışmısan, amma daha yaxşı ola bilərdi!";
+        } else if (sehv_cavab > 10) {
+            PointsTitle.innerText = "Yaxşı cəhd! Davam et 💪";
+        } else if (sehv_cavab > 5) {
+            PointsTitle.innerText = "Çox yaxşı işlədin! Bir az daha diqqət 👍";
+        } else if (sehv_cavab > 0) {
+            PointsTitle.innerText = "Çox əla iş! 👏";
+        } else {
+            PointsTitle.innerText = "Mükəmməl! Heç bir səhv yoxdur! 🏆";
+        }
+        
+        
         
     }
     
