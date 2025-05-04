@@ -160,7 +160,11 @@ const Option = (id,up) =>{
             }
             
         })
-        
+        Swal.fire({
+            title: "Imtahan Bitti!",
+            text: "cavablari gormek ucun ok basin",
+            icon: "success"
+          });
         
     }
     
