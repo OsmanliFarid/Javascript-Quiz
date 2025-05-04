@@ -114,3 +114,17 @@ input{
 .SubmitINP{
    padding: 0;
 }
+#SualNext,#SualEnd{
+    font-size: 20px;
+}
+.sual-box{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+.Sual{
+    margin-right: 5px;
+    font-size: 20px;
+}
