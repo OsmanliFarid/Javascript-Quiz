@@ -96,7 +96,8 @@ const Option = (id,up) =>{
        
        
     data3 = data2[me]
-    AnswerBoxs.innerHTML += `<h1 class="AnswerTitle">${data3.question}</h1>
+    
+        AnswerBoxs.innerHTML += `<h1 class="AnswerTitle" id="AnswerTitle">${data3.question}</h1>
         <div class="questionBox">
             <div class="questionA">
                 <p>A)</p>
@@ -117,14 +118,14 @@ const Option = (id,up) =>{
         </div>
         <div class="sual_cavab">
             <h1 id="Question">sualin cavabi:</h1>
-            <p>${data3.correctAnswer}</p>
+            <p id="OptionsJs">${data3.correctAnswer}</p>
         </div>
         <div class="user_cavab">
             <h1 id="UserQuestion">senin cavab:</h1>
-            <p>${id}</p>
+            <p id="OptionsUser">${id}</p>
         </div>`
-       
-       
+    
+    
        
        
        
