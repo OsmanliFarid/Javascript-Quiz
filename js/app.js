@@ -106,6 +106,9 @@ const Option = (id,up) =>{
     });
     options.forEach((element) =>{
         
+        
+        
+        
         if(element.textContent === id){  
             if(id === up){
                 element.style.backgroundColor = "green"
@@ -117,6 +120,12 @@ const Option = (id,up) =>{
                 element.style.backgroundColor = "red"
               sehv_cavab++
               min2.innerText = sehv_cavab
+              options.forEach((element) =>{
+                if(element.innerText == up){
+                    element.style.backgroundColor = "green"
+                }
+              })
+              
                 
                 
             }
