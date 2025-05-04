@@ -17,6 +17,10 @@ const FormINP = document.querySelector("#FormINP")
 const Users = document.querySelector("#Users")
 const NameInput = document.querySelector("#NameInput")
 const SurnameInput = document.querySelector("#SurnameInput")
+const SualNext = document.querySelector("#SualNext")
+const SualEnd = document.querySelector("#SualEnd")
+
+
 
 let surname = ""
 let name = ""
@@ -72,7 +76,9 @@ const QuizShow = (url) =>{
 
        
        
-       
+           SualEnd.innerText = "/ " + data.length
+           
+           
     })
     
     
@@ -82,7 +88,7 @@ const QuizShow = (url) =>{
 
 QuizShow(ENDPOINT)
 
-
+SualNext.innerText = 0
 const Option = (id,up) =>{
        
        
@@ -119,15 +125,18 @@ const Option = (id,up) =>{
         
     })
     me++
-    
+    SualNext.innerText = me
  
  
     setTimeout(() => {
     if(me == datapuan){
+        
+    const SualBox = document.querySelector("#SualBox")
+    SualBox.style.display = "none"
         QuizBox.innerHTML = ""
         QuizBoxs.classList.add("m")
         Table.classList.remove("activeNo")
-        
+        SualBox.classList.remove()
         let arr = {
             name:name,
             surname:surname,
@@ -153,4 +162,4 @@ const Option = (id,up) =>{
    
     }
 
-
+    
