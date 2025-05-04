@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 body{
     background-color: grey;
 }
@@ -52,7 +53,7 @@ body{
     display: none;
 }
 .m {
-    height: 400px;
+    height: 500px;
 }
 table,tr,td,th{
     border: 3px solid black;
@@ -129,4 +130,56 @@ input{
 .Sual{
     margin-right: 5px;
     font-size: 20px;
+}
+#PointsTitle{
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.SualBtn{
+    display: none;
+    width: 200px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    
+}
+.SualBox2{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.questionA,.questionB,.questionC,.questionD{
+    display: flex;
+    gap: 10px;
+}
+.sual_cavab,.user_cavab{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.answerBoxs{
+    background-color: aquamarine;
+   display: none;
+    width: 700px;
+    border-radius: 30px;
+    padding: 20px;
+    *{
+        padding: 3px 0px;
+    }
+}
+#UserQuestion,#Question{
+    font-size: 24px;
+}
+.AnswerTitle{
+    padding-top:30px;
+}
+.answer-box{
+    display: flex;
+    justify-content: center;
+}
+.n{
+    box-shadow: none;
 }
