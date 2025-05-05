@@ -175,7 +175,9 @@ const Option = (id,up) =>{
             title: "Imtahan Bitti!",
             text: "cavablari gormek ucun ok basin",
             icon: "success"
+            
           });
+          
         const SualBtn = document.querySelector("#SualBtn")
         SualBtn.style.display = "block" 
         SualBtn.addEventListener('click',(e) =>{
@@ -205,19 +207,17 @@ const Option = (id,up) =>{
             }
             
         })
-        if (sehv_cavab > 19) {
-            PointsTitle.innerText = "Daha çox məşq etməlisən 😕";
-        } else if (sehv_cavab > 15) {
-            PointsTitle.innerText = "Çalışmısan, amma daha yaxşı ola bilərdi!";
-        } else if (sehv_cavab > 10) {
-            PointsTitle.innerText = "Yaxşı cəhd! Davam et 💪";
-        } else if (sehv_cavab > 5) {
-            PointsTitle.innerText = "Çox yaxşı işlədin! Bir az daha diqqət 👍";
-        } else if (sehv_cavab > 0) {
-            PointsTitle.innerText = "Çox əla iş! 👏";
-        } else {
+        if (duz_cavab > 19) {
             PointsTitle.innerText = "Mükəmməl! Heç bir səhv yoxdur! 🏆";
-        }
+        } else if (duz_cavab >= 15) {
+            PointsTitle.innerText = "Əla iş! 👏 Amma daha yaxşı ola bilərdi!";
+        } else if (duz_cavab >= 10) {
+            PointsTitle.innerText = "Yaxşı cəhd! Davam et 💪";
+        } else if (duz_cavab >= 5) {
+            PointsTitle.innerText = "Çox yaxşı işlədin! Bir az daha diqqət 👍";
+        } else {
+            PointsTitle.innerText = "Daha çox məşq etməlisən 😕";
+        }   
         
         
         
