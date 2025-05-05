@@ -226,7 +226,7 @@ const Option = (id,up) =>{
     
     
         QuizShow(ENDPOINT)
-    }, 500);
+    }, 300);
    
     }
 
