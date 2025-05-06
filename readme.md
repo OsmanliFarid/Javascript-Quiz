@@ -59,4 +59,4 @@ Sonra `index.html` faylını brauzerdə açın.
 
 ## ✅ Layihə Statusu
 
-Bu layihə tam işləkdir. Gələcəkdə yeni suallar, vaxt limiti və nəticə paylaşma kimi funksiyalar əlavə edilə bilər.
+Bu layihə tam işləkdir. Gələcəkdə yeni suallar, vaxt limiti kimi funksiyalar əlavə edilə bilər.
