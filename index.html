@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
     <div class="users" id="Users">
-        <div class="user">
-            <form method="get" id="FormINP">
-                <input type="text" placeholder="Adin nedir" id="NameInput">
-            <input type="text" placeholder="Soyadin nedir" id="SurnameInput">
-            <input type="submit" placeholder="SUBMIT" class="SubmitINP">
-            </form>
-        </div>
+      <div class="user">
+        <form method="get" id="FormINP">
+          <input type="text" placeholder="Adin nedir" id="NameInput" />
+          <input type="text" placeholder="Soyadin nedir" id="SurnameInput" />
+          <input type="submit" placeholder="SUBMIT" class="SubmitINP" />
+        </form>
+      </div>
     </div>
     <div class="quiz-boxs2">
-        <div class="quiz-boxs" id="QuizBoxs">
-            <div class="sual-box" id="SualBox">
-                <span class="Sual">Sual:</span> <span id="SualNext"></span><span id="SualEnd"></span>
-            </div>
-            <div class="PuanBoxs">
-                <table id="Table">
-                    <tr>
-                        <th>duz</th>
-                        <th>sehv</th>
-                    </tr>
-                    <tr>
-                        <td id="min">0</td>
-                        <td id="min2">0</td>
-                    </tr>
-                </table>
-                <h1 id="PointsTitle"></h1>
-            </div>
-            <div class="quiz-box" id="QuizBox">
-                
-            </div>
-            <div class="SualBox2">
-                <button class="SualBtn" id="SualBtn">cavablar</button>
-            </div>
-            <div class="answer-box">
-                <div class="answerBoxs" id="AnswerBoxs">
-                
-                </div>
-            </div>
+      <div class="quiz-boxs" id="QuizBoxs">
+        <div class="sual-box" id="SualBox">
+          <span class="Sual">Sual:</span> <span id="SualNext"></span
+          ><span id="SualEnd"></span>
         </div>
+        <div class="PuanBoxs">
+          <table id="Table">
+            <tr>
+              <th>duz</th>
+              <th>sehv</th>
+            </tr>
+            <tr>
+              <td id="min">0</td>
+              <td id="min2">0</td>
+            </tr>
+          </table>
+          <h1 id="PointsTitle"></h1>
+        </div>
+        <div class="quiz-box" id="QuizBox"></div>
+        <div class="SualBox2">
+          <button class="SualBtn" id="SualBtn">cavablar</button>
+        </div>
+        <div class="answer-box">
+          <div class="answerBoxs" id="AnswerBoxs"></div>
+        </div>
+      </div>
     </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js" integrity="sha512-FPlUpimug7gt7Hn7swE8N2pHw/+oQMq/+R/hH/2hZ43VOQ+Kjh25rQzuLyPz7aUWKlRpI7wXbY6+U3oFPGjPOA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"
+      integrity="sha512-FPlUpimug7gt7Hn7swE8N2pHw/+oQMq/+R/hH/2hZ43VOQ+Kjh25rQzuLyPz7aUWKlRpI7wXbY6+U3oFPGjPOA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="./js/app.js"></script>
-</body>
+  </body>
 </html>
